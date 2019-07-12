@@ -1,16 +1,20 @@
 const {RichEmbed} = require("discord.js");
 const {basename} = require("path");
-const { color }  = require("../../config.json");
 
 class RicherEmbed extends RichEmbed {
-    constructor(channelObj, embedObj) {
+    constructor(channelObj, embedObj, options) {
         super();
-        this.color = color;
         this.channel = channelObj;
 
         if (embedObj) {
             for (var prop in embedObj) { //Merge in all embed object props
                 this[prop] = embedObj[prop];
+            }
+        }
+		
+		if (options) {
+            for (var prop in options) { //Merge in all options object props
+                this[prop] = options[prop];
             }
         }
     };

@@ -10,9 +10,9 @@
     "discord.js",
     "embed"
   ],
-  "dependancies": {
-	"discord.js": "^11.4.2"
-  }
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
   "author": "number.isnan",
   "license": "ISC"
 }
