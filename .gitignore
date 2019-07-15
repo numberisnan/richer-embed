@@ -1,2 +1,9 @@
+# Nodejs
 node_modules/*
+
+# Webstorm
 .idea/*
+
+# README Generation
+README.bat
+BEFORE.md
