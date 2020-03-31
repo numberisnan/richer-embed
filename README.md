@@ -14,7 +14,7 @@ An extension of Discord.js's RichEmbed class, with more functionality such as se
     * [.setLocalImage(pathName)](#RicherEmbed+setLocalImage) ⇒ [<code>RicherEmbed</code>](#RicherEmbed)
     * [.setContent(title, content)](#RicherEmbed+setContent) ⇒ [<code>RicherEmbed</code>](#RicherEmbed)
     * [.replace(messageToReplace)](#RicherEmbed+replace)
-    * [.send()](#RicherEmbed+send)
+    * [.send()](#RicherEmbed+send) ⇒ <code>Promise(Message)</code>
     * [.chat(authorObj, command, imageUrl)](#RicherEmbed+chat) ⇒ [<code>RicherEmbed</code>](#RicherEmbed)
 
 <a name="new_RicherEmbed_new"></a>
@@ -24,7 +24,7 @@ An extension of Discord.js's RichEmbed class, with more functionality such as se
 
 | Param | Type | Description |
 | --- | --- | --- |
-| channelObj | <code>Channel</code> | Discord.js Channel instance for which the embed is being created |
+| channelObj | <code>Channel</code> \| <code>User</code> | Discord.js Channel instance for which the embed is being created |
 | options | <code>Object</code> | Additional properties to add to embed. An existing embed can also be inserted to turn it into a RicherEmbed instance (may be buggy). |
 
 <a name="RicherEmbed+personalise"></a>
@@ -89,7 +89,7 @@ Replaces a message with this embed
 
 <a name="RicherEmbed+send"></a>
 
-### richerEmbed.send()
+### richerEmbed.send() ⇒ <code>Promise(Message)</code>
 Send the message to the channel in embed.channel
 
 **Kind**: instance method of [<code>RicherEmbed</code>](#RicherEmbed)  
