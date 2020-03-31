@@ -1,6 +1,6 @@
 {
   "name": "richer-embed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An extension of RichEmbed class from discord.js",
   "main": "index.js",
   "scripts": {

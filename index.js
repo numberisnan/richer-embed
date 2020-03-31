@@ -3,7 +3,7 @@ const {basename} = require("path");
 
 class RicherEmbed extends RichEmbed {
     /**
-     * @param {Channel} channelObj - Discord.js Channel instance for which the embed is being created
+     * @param {Channel | User} channelObj - Discord.js Channel instance for which the embed is being created
      * @param {Object} options - Additional properties to add to embed. An existing embed can also be inserted to turn it into a RicherEmbed instance (may be buggy).
      * @returns {RicherEmbed} Returns itself
      */
@@ -84,9 +84,10 @@ class RicherEmbed extends RichEmbed {
 
     /**
      * Send the message to the channel in embed.channel
+     * @returns {Promise(Message)}
      */
     send() {
-        this.channel.send({embed: this});
+        return this.channel.send({embed: this});
     }
 
     /**
